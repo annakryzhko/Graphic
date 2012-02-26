@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 6</title>
+    <link rel="Stylesheet"  type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/lib/raphael-min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <div id="menu">
+    <p class="header">Оценен</p>
+    <ul id="chart_menu">
+    <li><a href="#" class="ui-active" data-value="prof">Профессиональный рост</a></li>
+    <li><a href="#" data-value="social">Соцпакет</a></li>    
+    <li><a href="#" data-value="team">Команда</a></li>    
+    <li><a href="#" data-value="social">Планы на полгода</a></li>    
+    <li><a href="#" data-value="team">Уровень зарплаты</a></li>    
+    <li><a href="#" data-value="prof">Компания как бренд</a></li>    
+    </ul>
+    </div>
+    <div id="container" style="width: 500px; height: 600px;">
+    </div>
+
+    <script type="text/javascript" src="js/chart.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript">
+       
+
+        var chart_menu = new Menu("#chart_menu", function (data) {
+            var chart = new Chart("container", config[data]);
+         });
+
+    </script>
+</body>
+</html>
